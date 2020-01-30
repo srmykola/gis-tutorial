@@ -138,7 +138,7 @@ LEAFLET_CONFIG = {
     'DEFAULT_CENTER': (-33.925 ,18.625),
     'DEFAULT_ZOOM': 10,
     'MAX_ZOOM': 20,
-    'MIN_ZOOM': 3,
+    'MIN_ZOOM': 2,
     'SCALE':'both',
     'ATTRIBUTION_PREFIX':'Powered by STRATEGYRULE.COM',
     'TILES': [('Open Street Map', 'http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {'attribution': '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>', 'maxZoom': 20}),
