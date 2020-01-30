@@ -140,7 +140,7 @@ LEAFLET_CONFIG = {
     'MAX_ZOOM': 20,
     'MIN_ZOOM': 2,
     'SCALE':'both',
-    'ATTRIBUTION_PREFIX':'Powered by STRATEGYRULE.COM',
+    'ATTRIBUTION_PREFIX':'&copy; <a href="http://strategyrule.com">STRATEGYRULE.COM</a>',
     'TILES': [('Open Street Map', 'http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {'attribution': '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>', 'maxZoom': 20}),
           ('Terrain Map', 'http://services.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}', {'attribution': 'Tiles &copy; Esri &mdash; Source: Esri, i-cubed, USDA, USGS, AEX, GeoEye, Getmapping, Aerogrid, IGN, IGP, UPR-EGP, and the GIS User Community', 'maxZoom': 20}),
           ('Data Map', 'https://cartodb-basemaps-{s}.global.ssl.fastly.net/dark_all/{z}/{x}/{y}.png', {'attribution':'&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a> &copy; <a href="http://cartodb.com/attributions">CartoDB</a>', 'maxZoom': 20})],
