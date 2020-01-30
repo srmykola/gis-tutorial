@@ -14,6 +14,6 @@ def home(request):
     return render(request,
         'app/index.html',
         {
-            'title': 'Home Page',
+            'title': 'Home Page'
         }
     )
