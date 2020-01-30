@@ -79,8 +79,8 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.contrib.gis.db.backends.postgis',
         'NAME': 'cptwater',
-        'USER': 'waterwatch'
-        'PASSWORD': 'postgres'
+        'USER': 'waterwatch',
+        'PASSWORD': 'postgres',
         'HOST': '0.0.0.0:8000',
     }
 }
