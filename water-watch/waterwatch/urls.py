@@ -26,7 +26,7 @@ import waterwatchapp.views
 
 
 urlpatterns = [
-    url(r'^$', waterwatchapp.views.home, name='home'),
+    url(r'^$', waterwatchapp.views.home, name=''),
     # url(r'^waterconsumption_data/$', waterconsumption_dataset, name='WaterConsumption'),
     # url(r'^top10_consumers/$', top10_consumers, name='top10consumers'),
     path('admin/', admin.site.urls),

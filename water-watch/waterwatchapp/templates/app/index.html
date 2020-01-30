@@ -118,22 +118,22 @@
     //     });
     //   },
 
-      onEachFeature: function(feature, layer) {
-        var radius = calcPropRadius(feature.properties.AvgMonthlyKL);
+    //   onEachFeature: function(feature, layer) {
+    //     var radius = calcPropRadius(feature.properties.AvgMonthlyKL);
+    //
+    //     var popupText = "<strong>" + feature.properties.Suburb + "</strong>";
+    //
+    //     layer.setRadius(radius);
+    //
+    //     layer.bindPopup(popupText, { offset: new L.Point(0, -radius) });
+    //   }
+    // }).addTo(map);
 
-        var popupText = "<strong>" + feature.properties.Suburb + "</strong>";
-
-        layer.setRadius(radius);
-
-        layer.bindPopup(popupText, { offset: new L.Point(0, -radius) });
-      }
-    }).addTo(map);
-
-    function calcPropRadius(avgmonthlykl) {
-            var scaleFactor = 90;//50; //16;
-            var area = avgmonthlykl * scaleFactor;
-            return Math.sqrt(area/Math.PI)*2;
-    }
+    // function calcPropRadius(avgmonthlykl) {
+    //         var scaleFactor = 90;//50; //16;
+    //         var area = avgmonthlykl * scaleFactor;
+    //         return Math.sqrt(area/Math.PI)*2;
+    // }
 
     var button = new L.Control.Button('Menu', {
         toggleButton: 'active',
