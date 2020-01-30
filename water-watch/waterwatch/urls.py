@@ -30,5 +30,5 @@ urlpatterns = [
     # url(r'^waterconsumption_data/$', waterconsumption_dataset, name='WaterConsumption'),
     # url(r'^top10_consumers/$', top10_consumers, name='top10consumers'),
     path('admin/', admin.site.urls),
-    path('', waterwatchapp.views.home.as_view(), name = 'home'),
+    # path('', waterwatchapp.views.home.as_view(), name = 'home'),
 ]
