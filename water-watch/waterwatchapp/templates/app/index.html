@@ -106,7 +106,7 @@
           fillColor: 'teal',
           color: '#537898',
           weight: 1,
-          fillOpacity: 0.5
+          fillOpacity: 0.3
         }).on({
           mouseover: function(e) {
             this.setStyle({color: 'yellow'});
@@ -130,7 +130,7 @@
     }).addTo(map);
 
     function calcPropRadius(avgmonthlykl) {
-            var scaleFactor = 90;//50; //16;
+            var scaleFactor = 30;//50; //16;
             var area = avgmonthlykl * scaleFactor;
             return Math.sqrt(area/Math.PI)*2;
     }
