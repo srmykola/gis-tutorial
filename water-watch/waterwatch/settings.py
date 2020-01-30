@@ -81,7 +81,7 @@ DATABASES = {
         'NAME': 'cptwater',
         'USER': 'waterwatch',
         'PASSWORD': 'postgres',
-        'HOST': '0.0.0.0',
+        'HOST': 'localhost',
     }
 }
 
