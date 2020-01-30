@@ -100,7 +100,7 @@
 <script type="text/javascript">
   function main_map_init(map, options) {
 
-    var dataset = new L.GeoJSON.AJAX("{% url 'waterwatchapp.models.WaterConsumption' %}", {
+    var dataset = new L.GeoJSON.AJAX("{% url WaterConsumption %}", {
       pointToLayer: function(feature, latlng) {
         return L.circleMarker(latlng, {
           fillColor: 'teal',
