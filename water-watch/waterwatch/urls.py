@@ -24,6 +24,6 @@ from waterwatchapp.models import WaterConsumption
 import waterwatchapp.views
 
 urlpatterns = [
-    url(r'^$', waterwatchapp.views.home, name = 'home')
+    url(r'^$', waterwatchapp.views.home, name = 'home'),
     path('admin/', admin.site.urls),
 ]
