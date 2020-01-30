@@ -133,7 +133,7 @@ STATIC_URL = '/static/'
 STATIC_ROOT = posixpath.join(*(BASE_DIR.split(os.path.sep) + ['static']))
 
 LEAFLET_CONFIG = {
-    'DEFAULT_CENTER': (-33.925, 18.625)
+    'DEFAULT_CENTER': (-33.925, 18.625),
     'DEFAULT_ZOOM': 10,
     'MAX_ZOOM': 20,
     'MIN_ZOOM': 3,
