@@ -11,7 +11,8 @@ import pandas as pd
 
 def home(request):
     """ Renders home page """
-    return render(request,
+    return render(
+        request,
         'app/index.html',
         {
             'title': 'Home Page',
