@@ -143,5 +143,5 @@ LEAFLET_CONFIG = {
                 {'attribution': '&copy; <a href = "http://www.openstreetmap.org/copyright">OpenStreetMap</a>',
                 'maxZoom': 20})]
     'OVERLAYS': [('Suburbs', 'https://citymaps.capetown.gov.za/agsext1/rest/services/Theme_Based/EGISViewer/MapServer/76/query?outFields=*&where=1%3D1', {'attribution': '&copy; IGN'}),
-                ('Dams', 'http://server/a/{z}/{x}/{y}.png', {'attribution': '&copy; IGN'})]
+                 ('Dams', 'http://server/a/{z}/{x}/{y}.png', {'attribution': '&copy; IGN'})]
 }
