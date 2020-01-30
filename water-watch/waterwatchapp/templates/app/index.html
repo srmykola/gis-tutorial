@@ -130,7 +130,7 @@
     }).addTo(map);
 
     function calcPropRadius(avgmonthlykl) {
-            var scaleFactor = 30;//50; //16;
+            var scaleFactor = 10;//50; //16;
             var area = avgmonthlykl * scaleFactor;
             return Math.sqrt(area/Math.PI)*2;
     }
