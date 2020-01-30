@@ -3,7 +3,7 @@ from django.http import HttpRequest, HttpResponse
 from django.template import RequestContext
 from datetime import datetime
 from django.core.serializers import serialize
-from waterwatchapp.models import WaterConsumption
+from waterwatchapp.models import waterconsumption
 from django.template.context import Context
 import pandas as pd
 

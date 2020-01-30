@@ -2,7 +2,7 @@
 from django.contrib.gis.db import models
 
 # Create your models here.
-class WaterConsumption(models.Model):
+class waterconsumption(models.Model):
     Id = models.IntegerField(primary_key = True)
     Suburb = models.CharField(max_length = 100)
     NoOfSingleResProp = models.IntegerField()
