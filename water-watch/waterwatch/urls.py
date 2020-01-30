@@ -1,7 +1,7 @@
 """waterwatch URL Configuration
 
 The `urlpatterns` list routes URLs to views. For more information please see:
-    https://docs.djangoproject.com/en/3.0/topics/http/urls/
+    https://docs.djangoproject.com/en/2.0/topics/http/urls/
 Examples:
 Function views
     1. Add an import:  from my_app import views
@@ -19,11 +19,15 @@ from django.urls import path
 from django.conf.urls import url
 import django.contrib.auth.views
 
-from waterwatchapp.models import waterconsumption
+from waterwatchapp.models import WaterConsumption
 
 import waterwatchapp.views
+from waterwatchapp.views import waterconsumption_dataset, top10_consumers
+
 
 urlpatterns = [
-    url(r'^$', waterwatchapp.views.home, name = 'home'),
+    url(r'^$', waterwatchapp.views.home, name='home'),
+    url(r'^waterconsumption_data/$', waterconsumption_dataset, name='waterconsumption'),
+    url(r'^top10_consumers/$', top10_consumers, name='top10consumers'),
     path('admin/', admin.site.urls),
 ]
