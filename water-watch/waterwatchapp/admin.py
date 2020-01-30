@@ -15,7 +15,7 @@ class WaterConsumptionAdmin(LeafletGeoAdmin):
 
 admin.site.register(WaterConsumption, WaterConsumptionAdmin)
 
-df_excelReader = pd.read_excel('/usr/Desktop/GIS-tutorial/water-watch/waterwatchapp/file/waterwatch_clean2.xlsx',
+df_excelReader = pd.read_excel('../usr/Desktop/GIS-tutorial/water-watch/waterwatchapp/file/waterwatch_clean2.xlsx',
                                 sheet_name='Sheet1')
 
 for index, row in df_excelReader.iterrows():
