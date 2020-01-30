@@ -19,7 +19,7 @@ from django.urls import path
 from django.conf.urls import url
 import django.contrib.auth.views
 
-from waterwatchapp.models import WaterConsumption
+from waterwatchapp.models import waterconsumption
 
 import waterwatchapp.views
 
