@@ -97,26 +97,26 @@
 }
 </style>
 
-<!-- <script type="text/javascript">
+<script type="text/javascript">
   function main_map_init(map, options) {
 
-    var dataset = new L.GeoJSON.AJAX("{% url 'WaterConsumption' %}", {
-      pointToLayer: function(feature, latlng) {
-        return L.circleMarker(latlng, {
-          fillColor: 'teal',
-          color: '#537898',
-          weight: 1,
-          fillOpacity: 0.5
-        }).on({
-          mouseover: function(e) {
-            this.setStyle({color: 'yellow'});
-          },
-
-          mouseout: function(e) {
-            this.setStyle({color: '#537898'});
-          }
-        });
-      },
+    // var dataset = new L.GeoJSON.AJAX("{% url 'WaterConsumption' %}", {
+    //   pointToLayer: function(feature, latlng) {
+    //     return L.circleMarker(latlng, {
+    //       fillColor: 'teal',
+    //       color: '#537898',
+    //       weight: 1,
+    //       fillOpacity: 0.5
+    //     }).on({
+    //       mouseover: function(e) {
+    //         this.setStyle({color: 'yellow'});
+    //       },
+    //
+    //       mouseout: function(e) {
+    //         this.setStyle({color: '#537898'});
+    //       }
+    //     });
+    //   },
 
       onEachFeature: function(feature, layer) {
         var radius = calcPropRadius(feature.properties.AvgMonthlyKL);
@@ -329,6 +329,6 @@
 
 
   }
-</script> -->
+</script>
 
 {% endblock %}
