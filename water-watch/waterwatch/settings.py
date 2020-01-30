@@ -78,7 +78,7 @@ WSGI_APPLICATION = 'waterwatch.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.contrib.gis.db.backends.postgis',
-        'NAME': 'cptwater'
+        'NAME': 'cptwater',
         'USER': 'waterwatch'
         'PASSWORD': 'postgres'
         'HOST': '0.0.0.0:8000',
