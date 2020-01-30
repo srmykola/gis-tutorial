@@ -33,4 +33,4 @@ for index, row in df_excelReader.iterrows():
     WaterConsumption(Id = Id, Suburb = Suburb, NoOfSingleResProp = NoOfSingleResProp,
                     AvgMonthlyKL = AvgMonthlyKL, AvgMonthlyKLPredicted = AvgMonthlyKLPredicted,
                     PredictionAccuracy = PredictionAccuracy, Month = Month,
-                    Year = Year, DateTime = DateTime, geom = Point(Latitude, Longitude)).save()
+                    Year = Year, DateTime = DateTime, geom = Point(Longitude, Latitude)).save()
