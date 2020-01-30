@@ -6,14 +6,14 @@ import pandas as pd
 from pandas import ExcelWriter
 from pandas import ExcelFile
 
-from waterwatchapp.models import WaterConsumption
+from waterwatchapp.models import waterconsumption
 
 # Register your models here.
 
 class WaterConsumptionAdmin(LeafletGeoAdmin):
     pass
 
-admin.site.register(WaterConsumption, WaterConsumptionAdmin)
+admin.site.register(waterconsumption, WaterConsumptionAdmin)
 
 df_excelReader = pd.read_excel('/usr/Desktop/GIS-tutorial/water-watch/waterwatchapp/waterwatch_clean2.xlsx', sheet_name='Sheet1')
 
@@ -30,7 +30,7 @@ for index, row in df_excelReader.iterrows():
     Longitude = row['Longitude']
     Latitude = row['Latitude']
 
-    WaterConsumption(Id = Id, Suburb = Suburb, NoOfSingleResProp = NoOfSingleResProp,
+    waterconsumption(Id = Id, Suburb = Suburb, NoOfSingleResProp = NoOfSingleResProp,
                     AvgMonthlyKL = AvgMonthlyKL, AvgMonthlyKLPredicted = AvgMonthlyKLPredicted,
                     PredictionAccuracy = PredictionAccuracy, Month = Month,
                     Year = Year, DateTime = DateTime, geom = Point(Longitude, Latitude)).save()
