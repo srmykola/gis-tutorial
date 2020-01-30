@@ -16,6 +16,14 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 
+from django.conf.urls import url
+import django.contrib.auth.views
+
+from waterwatchapp.models import WaterConsumption
+
+import waterwatchapp.views
+
 urlpatterns = [
+    url(r'^$', waterwatchapp.views.home, name = 'home')
     path('admin/', admin.site.urls),
 ]
