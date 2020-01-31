@@ -48,7 +48,7 @@ for index, row in df_excelReader.iterrows():
     Id = index
     Country = row['Country/Region']
     Province = row['Province/State']
-    CountryProvince = row['Country/Region'] + ' | ' + row['Province/State']
+    CountryProvince = row['Country/Region'] + ' - ' + row['Province/State']
     NoOfConfirmed = row['Confirmed']
     NoOfRecovered = row['Recovered']
     NoOfDeath = row['Death']
