@@ -25,6 +25,7 @@ import waterwatchapp.views
 from waterwatchapp.views import waterconsumption_dataset, top10_consumers
 
 from django.views.static import serve
+import waterwatch.settings
 
 
 urlpatterns = [
