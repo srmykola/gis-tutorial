@@ -226,10 +226,10 @@
 
     function barChartLegend() {
 
-      var info = L.control({position: 'topright'});
+      var info = L.control({position: 'bottomright'});
       info.onAdd = function(map) {
         var div = L.DomUtil.create('div', 'info');
-        div.innerHTML += '<h6>Top 10 Consumers (KL)</h6>';
+        div.innerHTML += '<h6>Top 10 infected provinces</h6>';
         div.innerHTML += '<canvas id="horBarChart"></canvas>';
 
         return div;
@@ -276,9 +276,9 @@
             data: {
               labels: label_array,
               datasets: [{
-                label: 'water',
-                backgroundColor: "rgba(0, 128, 128, 0.9)",
-                borderColor: "rgba(0, 128, 128, 1)",
+                label: 'number of infected',
+                backgroundColor: "rgba(128, 128, 0, 0.9)",
+                borderColor: "rgba(128, 128, 0, 1)",
                 data: data_array
               }]
             },
