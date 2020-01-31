@@ -172,13 +172,13 @@
     createLegend();
 
     function createLegend() {
-      var legend = L.control({position: 'topleft'});
+      var legend = L.control({position: 'bottomleft'});
       legend.onAdd = function(map) {
         var legendContainer = L.DomUtil.create('div', 'legend');
 
         var symbolsContainer = L.DomUtil.create('div', 'symbolsContainer');
 
-        var classes = [4, 10, 20];
+        var classes = [Math.sqrt(200), Math.sqrt(1500), Math.sqrt(3000)];
 
         var legendCircle;
 
