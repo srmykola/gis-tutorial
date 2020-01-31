@@ -55,7 +55,7 @@
 
 .info {
     width:30vw;
-    height:20vh;
+    height:30vh;
     /* width:20vw; */
     /* height:300px; */
     padding: 6px 10px;
@@ -256,13 +256,13 @@
           var obj = JSON.parse(data);
 
           obj.forEach(o => {
-            x_labels.push(o.Suburb);
+            x_labels.push(o.CountryProvince);
           });
 
           var label_array = Object.values(x_labels);
 
           obj.forEach(o => {
-            y_data.push(o.AvgMonthlyKL);
+            y_data.push(o.NoOfConfirmed);
           });
 
           var data_array = Object.values(y_data);
