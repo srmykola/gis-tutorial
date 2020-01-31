@@ -10,4 +10,4 @@ sqlparse==0.3.0
 static3==0.7.0
 whitenoise==5.0.1
 leaflet
-djgeojson
+django-geojson
