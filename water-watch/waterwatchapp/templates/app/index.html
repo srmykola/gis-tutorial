@@ -136,28 +136,28 @@
             return Math.sqrt(area/Math.PI)*2**2;
     }
 
-    var button = new L.Control.Button('Menu', {
-        toggleButton: 'active',
-        position: 'topleft',
-    });
+    // var button = new L.Control.Button('Menu', {
+    //     toggleButton: 'active',
+    //     position: 'topleft',
+    // });
+    //
+    // button.addTo(map);
+    //
+    // button.on('click', function() {
+    //     sidebar.toggle();
+    // });
 
-    button.addTo(map);
 
-    button.on('click', function() {
-        sidebar.toggle();
-    });
+    // var waterBtn = new L.Control.Button('Water', {
+    //     toggleButton: 'active',
+    //     position: 'topleft',
+    // });
 
+    // waterBtn.addTo(map);
 
-    var waterBtn = new L.Control.Button('Water', {
-        toggleButton: 'active',
-        position: 'topleft',
-    });
-
-    waterBtn.addTo(map);
-
-    waterBtn.on('click', function() {
-        rightSidebar.toggle();
-    });
+    // waterBtn.on('click', function() {
+    //     rightSidebar.toggle();
+    // });
 
     var rightSidebar = L.control.sidebar('sidebar-right', {
         closeButton: true,
