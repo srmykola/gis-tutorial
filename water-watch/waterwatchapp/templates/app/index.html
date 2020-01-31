@@ -169,6 +169,7 @@
         position: 'left'
     }).addTo(map);
 
+    displayhorBarChart();
     createLegend();
 
     function createLegend() {
@@ -178,7 +179,7 @@
 
         var symbolsContainer = L.DomUtil.create('div', 'symbolsContainer');
 
-        var classes = [Math.sqrt(200), Math.sqrt(1500), Math.sqrt(3000)];
+        var classes = [10, 27, 54];
 
         var legendCircle;
 
@@ -239,7 +240,7 @@
     }
 
 
-    displayhorBarChart();
+
 
     function displayhorBarChart() {
 
