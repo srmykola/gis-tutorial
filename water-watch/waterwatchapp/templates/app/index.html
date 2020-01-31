@@ -104,17 +104,17 @@
     var dataset = new L.GeoJSON.AJAX("{% url 'Coronavirus' %}", {
       pointToLayer: function(feature, latlng) {
         return L.circleMarker(latlng, {
-          fillColor: 'teal',
-          color: '#81D8D0',
+          fillColor: '#E80018',
+          color: '#E80018',
           weight: 1,
           fillOpacity: 0.3
         }).on({
           mouseover: function(e) {
-            this.setStyle({color: 'yellow'});
+            this.setStyle({color: 'red'});
           },
 
           mouseout: function(e) {
-            this.setStyle({color: '#81D8D0'});
+            this.setStyle({color: '#E80018'});
           }
         });
       },
