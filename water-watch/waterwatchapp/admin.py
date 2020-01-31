@@ -7,6 +7,7 @@ from pandas import ExcelWriter
 from pandas import ExcelFile
 
 from waterwatchapp.models import WaterConsumption
+from waterwatchapp.models import Coronavirus
 
 # Register your models here.
 
@@ -47,6 +48,7 @@ for index, row in df_excelReader.iterrows():
     Id = index
     Country = row['Country/Region']
     Province = row['Province/State']
+    CountryProvince = row['Country/Region'] + '|' + row['Province/State']
     NoOfConfirmed = row['Confirmed']
     NoOfRecovered = row['Recovered']
     NoOfDeath = row['Death']
@@ -57,6 +59,7 @@ for index, row in df_excelReader.iterrows():
     Coronavirus(Id = Id,
         Country = Country,
         Province = Province,
+        CountryProvince = CountryProvince,
         NoOfConfirmed = NoOfConfirmed,
         NoOfRecovered = NoOfRecovered,
         NoOfDeath = NoOfDeath,

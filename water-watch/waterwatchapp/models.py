@@ -19,3 +19,20 @@ class WaterConsumption(models.Model):
 
     class Meta:
         verbose_name_plural = 'WaterConsumption'
+
+class Coronavirus(models.Model):
+    Id = models.IntegerField(primary_key = True)
+    Country = models.CharField(max_length = 50)
+    Province = models.CharField(max_length = 50)
+    CountryProvince = models.CharField(max_length = 100)
+    NoOfConfirmed = models.IntegerField()
+    NoOfRecovered = models.IntegerField()
+    NoOfDeath = models.IntegerField()
+    Day = models.IntegerField()
+    geom = models.PointField()
+
+    def __str__(self):
+        return self.CountryProvince
+
+    class Meta:
+        verbose_name_plural = 'Coronavirus'
