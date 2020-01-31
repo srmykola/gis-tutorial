@@ -34,3 +34,31 @@ for index, row in df_excelReader.iterrows():
                     AvgMonthlyKL = AvgMonthlyKL, AvgMonthlyKLPredicted = AvgMonthlyKLPredicted,
                     PredictionAccuracy = PredictionAccuracy, Month = Month,
                     Year = Year, DateTime = DateTime, geom = Point(Longitude, Latitude)).save()
+
+
+class CoronavirusAdmin(LeafletGeoAdmin):
+    pass
+
+admin.site.register(Coronavirus, CoronavirusAdmin)
+
+df_excelReader = pd.read_excel('/usr/Desktop/GIS-tutorial/water-watch/waterwatchapp/coronavirus.xlsx', sheet_name='Sheet1')
+
+for index, row in df_excelReader.iterrows():
+    Id = index
+    Country = row['Country/Region']
+    Province = row['Province/State']
+    NoOfConfirmed = row['Confirmed']
+    NoOfRecovered = row['Recovered']
+    NoOfDeath = row['Death']
+    Longitude = row['longitude']
+    Latitude = row['latitude']
+    Day = row['day']
+
+    Coronavirus(Id = Id,
+        Country = Country,
+        Province = Province,
+        NoOfConfirmed = NoOfConfirmed,
+        NoOfRecovered = NoOfRecovered,
+        NoOfDeath = NoOfDeath,
+        Day = Day,
+        geom = Point(Longitude, Latitude)).save()
