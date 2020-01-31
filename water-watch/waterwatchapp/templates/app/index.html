@@ -130,10 +130,10 @@
       }
     }).addTo(map);
 
-    function calcPropRadius(avgmonthlykl) {
+    function calcPropRadius(confirmed) {
             var scaleFactor = 5;//50; //16;
-            var area = avgmonthlykl * scaleFactor;
-            return Math.sqrt(area/Math.PI)*2**2;
+            var area = confirmed * scaleFactor;
+            return Math.sqrt(confirmed);
     }
 
     // var button = new L.Control.Button('Menu', {
@@ -186,7 +186,7 @@
 
         var margin;
 
-        $(legendContainer).append("<h6 id='legendTitle'>Average in Kilolitres (KL)</h6>");
+        $(legendContainer).append("<h6 id='legendTitle'>Number of infected</h6>");
 
         for (var i = 0; i <= classes.length-1; i++) {
           legendCircle = L.DomUtil.create("div", "legendCircle");
