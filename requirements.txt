@@ -10,4 +10,9 @@ sqlparse==0.3.0
 static3==0.7.0
 whitenoise==5.0.1
 leaflet
+geojson
 django-geojson
+django-leaflet
+numpy
+pandas
+xlrd
