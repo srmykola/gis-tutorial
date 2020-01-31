@@ -101,7 +101,7 @@
 <script type="text/javascript">
   function main_map_init(map, options) {
 
-    var dataset = new L.GeoJSON.AJAX("{% url 'WaterConsumption' %}", {
+    var dataset = new L.GeoJSON.AJAX("{% url 'Coronavirus' %}", {
       pointToLayer: function(feature, latlng) {
         return L.circleMarker(latlng, {
           fillColor: 'teal',
@@ -120,9 +120,9 @@
       },
 
       onEachFeature: function(feature, layer) {
-        var radius = calcPropRadius(feature.properties.AvgMonthlyKL);
+        var radius = calcPropRadius(feature.properties.NoOfConfirmed);
 
-        var popupText = "<strong>" + feature.properties.Suburb + "</strong>";
+        var popupText = "<strong>" + feature.properties.CountryProvince + "</strong>";
 
         layer.setRadius(radius);
 
