@@ -172,7 +172,7 @@
     createLegend();
 
     function createLegend() {
-      var legend = L.control({position: 'bottomleft'});
+      var legend = L.control({position: 'topleft'});
       legend.onAdd = function(map) {
         var legendContainer = L.DomUtil.create('div', 'legend');
 
@@ -226,7 +226,7 @@
 
     function barChartLegend() {
 
-      var info = L.control({position: 'bottomright'});
+      var info = L.control({position: 'bottomleft'});
       info.onAdd = function(map) {
         var div = L.DomUtil.create('div', 'info');
         div.innerHTML += '<h6>Top 10 infected provinces</h6>';
