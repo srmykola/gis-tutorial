@@ -24,10 +24,13 @@ from waterwatchapp.models import WaterConsumption
 import waterwatchapp.views
 from waterwatchapp.views import waterconsumption_dataset, top10_consumers
 
+from django.views.static import serve
+
 
 urlpatterns = [
     url(r'^$', waterwatchapp.views.home, name='home'),
     url(r'^waterconsumption_data/$', waterconsumption_dataset, name='WaterConsumption'),
     url(r'^top10_consumers/$', top10_consumers, name='top10consumers'),
+    url(r'^static/(?P<path>.*)$', serve,{'document_root': settings.STATIC_ROOT}),
     path('admin/', admin.site.urls),
 ]
