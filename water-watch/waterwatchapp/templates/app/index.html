@@ -169,6 +169,7 @@
         position: 'left'
     }).addTo(map);
 
+    barChartLegend();
     displayhorBarChart();
     createLegend();
 
@@ -179,7 +180,7 @@
 
         var symbolsContainer = L.DomUtil.create('div', 'symbolsContainer');
 
-        var classes = [10, 27, 54];
+        var classes = [50, 1500, 3000];
 
         var legendCircle;
 
@@ -200,11 +201,11 @@
                                "px; height: " + currentRadius*2 +
                                "px; margin-left: " + margin + "px" );
 
-           if (classes[i] == 20) {
-               $(legendCircle).append("<span class='legendValue'>" + '11 - ' + classes[i] + '+' + "</span>");
-           } else if (classes[i] == 10) {
-               $(legendCircle).append("<span class='legendValue'>" + '5 - ' + classes[i] + "</span>");
-           } else if (classes[i] == 4) {
+           if (classes[i] == 3000) {
+               $(legendCircle).append("<span class='legendValue'>" + '1500 - ' + classes[i] + '+' + "</span>");
+           } else if (classes[i] == 1500) {
+               $(legendCircle).append("<span class='legendValue'>" + '50 - ' + classes[i] + "</span>");
+           } else if (classes[i] == 50) {
                $(legendCircle).append("<span class='legendValue'>" + '0 - ' + classes[i] + "</span>");
            }
 
@@ -223,7 +224,6 @@
       legend.addTo(map);
     }
 
-    barChartLegend();
 
     function barChartLegend() {
 
