@@ -20,9 +20,10 @@ from django.conf.urls import url
 import django.contrib.auth.views
 
 from waterwatchapp.models import WaterConsumption
+from waterwatchapp.models import Coronavirus
 
 import waterwatchapp.views
-from waterwatchapp.views import waterconsumption_dataset, top10_consumers
+from waterwatchapp.views import waterconsumption_dataset, top10_consumers, coronavirus_dataset
 
 from django.views.static import serve
 import waterwatch.settings
@@ -31,6 +32,7 @@ import waterwatch.settings
 urlpatterns = [
     url(r'^$', waterwatchapp.views.home, name='home'),
     url(r'^waterconsumption_data/$', waterconsumption_dataset, name='WaterConsumption'),
+    url(r'^coronavirus_data/$', coronavirus_dataset, name='WaterConsumption'),
     url(r'^top10_consumers/$', top10_consumers, name='top10consumers'),
     url(r'^static/(?P<path>.*)$', serve,{'document_root': waterwatch.settings.STATIC_ROOT}),
     path('admin/', admin.site.urls),

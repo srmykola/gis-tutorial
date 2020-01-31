@@ -22,6 +22,10 @@ def top10_consumers(request):
     df_top10_rows_json = df_top10_rows.to_json(orient='records')
     return HttpResponse(df_top10_rows_json, content_type='json')
 
+def coronavirus_dataset(request):
+    coronavirus = serialize('geojson', coronavirus.objects.all())
+    return HttpResponse(coronavirus, content_type = 'json')
+
 def home(request):
     """ Renders home page """
     return render(
