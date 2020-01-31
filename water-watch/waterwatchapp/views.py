@@ -14,10 +14,10 @@ def waterconsumption_dataset(request):
 
 def top10_consumers(request):
     #data = WaterConsumption.objects.only('Suburb').order_by('-AvgMonthlyKL')[:20]
-    df_top10 = pd.DataFrame.from_records(WaterConsumption.objects.all().values())
+    df_top10 = pd.DataFrame.from_records(Coronavirus.objects.all().values())
     #df_top10_x_y = df_top10[['Suburb']]
-    df_top10_x_y_sorted = df_top10.sort_values(['AvgMonthlyKL'], ascending=False)
-    df_top10_x_y = df_top10_x_y_sorted[['Suburb', 'AvgMonthlyKL']]
+    df_top10_x_y_sorted = df_top10.sort_values(['NoOfConfirmed'], ascending=False)
+    df_top10_x_y = df_top10_x_y_sorted[['CountryProvince', 'NoOfConfirmed']]
     df_top10_rows = df_top10_x_y.head(10)
     df_top10_rows_json = df_top10_rows.to_json(orient='records')
     return HttpResponse(df_top10_rows_json, content_type='json')
