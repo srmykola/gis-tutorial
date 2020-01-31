@@ -3,7 +3,7 @@ from django.http import HttpRequest, HttpResponse
 from django.template import RequestContext
 from datetime import datetime
 from django.core.serializers import serialize
-from waterwatchapp.models import WaterConsumption, coronavirus
+from waterwatchapp.models import WaterConsumption, Coronavirus
 from django.template.context import Context
 import pandas as pd
 
@@ -23,7 +23,7 @@ def top10_consumers(request):
     return HttpResponse(df_top10_rows_json, content_type='json')
 
 def coronavirus_dataset(request):
-    coronavirus_response = serialize('geojson', coronavirus.objects.all())
+    coronavirus_response = serialize('geojson', Coronavirus.objects.all())
     return HttpResponse(coronavirus_response, content_type = 'json')
 
 def home(request):
