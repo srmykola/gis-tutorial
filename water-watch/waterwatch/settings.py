@@ -28,7 +28,10 @@ DEBUG = False
 
 ALLOWED_HOSTS = ['35.233.142.155', 'localhost', '0.0.0.0']
 
+from os import environ
 
+GEOS_LIBRARY_PATH = environ.get('GEOS_LIBRARY_PATH')
+GDAL_LIBRARY_PATH = environ.get('GDAL_LIBRARY_PATH')
 # Application definition
 
 INSTALLED_APPS = [
