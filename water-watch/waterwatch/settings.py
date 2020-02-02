@@ -133,8 +133,8 @@ USE_TZ = True
 
 STATIC_URL = '/waterwatchapp/static/'
 
-STATIC_ROOT = posixpath.join(*(BASE_DIR.split(os.path.sep) + ['waterwatchapp/static']))
-
+STATIC_ROOT = posixpath + ['waterwatchapp/static']
+# posixpath.join(*(BASE_DIR.split(os.path.sep)
 LEAFLET_CONFIG = {
     'DEFAULT_CENTER': (33.346444, 103.459442),
     'DEFAULT_ZOOM': 3,
