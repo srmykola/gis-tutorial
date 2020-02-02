@@ -1,1 +1,1 @@
-web: python /water-watch/manage.py
+web: python ~/water-watch/manage.py
