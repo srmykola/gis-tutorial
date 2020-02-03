@@ -82,7 +82,7 @@ WSGI_APPLICATION = 'waterwatch.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/2.0/ref/settings/#databases
 
-# DATABASES = {
+DATABASES = {
 #     'default': {
 #          'ENGINE': 'django.contrib.gis.db.backends.postgis',
 #          'NAME': 'd8vpute4kt5m2r',
@@ -91,7 +91,7 @@ WSGI_APPLICATION = 'waterwatch.wsgi.application'
 #          'HOST': 'localhost',
 #          'PORT': '5432',
 #     }
-# }
+}
 
 import dj_database_url
 db_from_env = dj_database_url.config()
