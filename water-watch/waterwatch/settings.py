@@ -92,6 +92,7 @@ DATABASES = {
 #          'PORT': '5432',
     }
 }
+POSTGIS_VERSION = (2, 0, 3)
 
 import dj_database_url
 db_from_env = dj_database_url.config()
