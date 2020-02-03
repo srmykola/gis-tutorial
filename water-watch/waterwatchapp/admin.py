@@ -9,6 +9,8 @@ from pandas import ExcelFile
 from waterwatchapp.models import WaterConsumption
 from waterwatchapp.models import Coronavirus
 
+from waterwatch.settings import BASE_DIR
+
 # Register your models here.
 
 class WaterConsumptionAdmin(LeafletGeoAdmin):
@@ -16,7 +18,7 @@ class WaterConsumptionAdmin(LeafletGeoAdmin):
 
 admin.site.register(WaterConsumption, WaterConsumptionAdmin)
 
-df_excelReader = pd.read_excel('/usr/Desktop/GIS-tutorial/water-watch/waterwatchapp/waterwatch_clean2.xlsx', sheet_name='Sheet1')
+df_excelReader = pd.read_excel(BASE_DIR + '/waterwatchapp/waterwatch_clean2.xlsx', sheet_name='Sheet1')
 
 for index, row in df_excelReader.iterrows():
     Id = index
@@ -42,7 +44,7 @@ class CoronavirusAdmin(LeafletGeoAdmin):
 
 admin.site.register(Coronavirus, CoronavirusAdmin)
 
-df_excelReader = pd.read_excel('/usr/Desktop/GIS-tutorial/water-watch/waterwatchapp/coronavirus.xlsx', sheet_name='Sheet1')
+df_excelReader = pd.read_excel(BASE_DIR + '/waterwatchapp/coronavirus.xlsx', sheet_name='Sheet1')
 
 for index, row in df_excelReader.iterrows():
     Id = index
