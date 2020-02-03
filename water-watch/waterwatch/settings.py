@@ -26,7 +26,7 @@ SECRET_KEY = '00mf#-^xai5%!%0y5^n(sl1ao1n9bd4)a-1lr_74=rtib5d05o'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['35.233.142.155', 'localhost', '0.0.0.0']
+ALLOWED_HOSTS = ['35.233.142.155', 'localhost', '0.0.0.0', '127.0.0.1']
 
 from os import environ
 
@@ -85,9 +85,9 @@ WSGI_APPLICATION = 'waterwatch.wsgi.application'
 DATABASES = {
     'default': {
          'ENGINE': 'django.contrib.gis.db.backends.postgis',
-         'NAME': 'cptwater',
-         'USER': 'waterwatch',
-         'PASSWORD': 'postgres',
+         'NAME': 'd8vpute4kt5m2r',
+         'USER': 'ptiescnzfmrqig',
+         'PASSWORD': '98e81a975d31301f31c0cbe2f92c390731e83e2877fc6e87f600e13c5fa92978',
          'HOST': 'localhost',
     }
 }
