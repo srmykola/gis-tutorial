@@ -89,6 +89,7 @@ DATABASES = {
          'USER': 'ptiescnzfmrqig',
          'PASSWORD': '98e81a975d31301f31c0cbe2f92c390731e83e2877fc6e87f600e13c5fa92978',
          'HOST': 'localhost',
+         'PORT': '5432',
     }
 }
 
