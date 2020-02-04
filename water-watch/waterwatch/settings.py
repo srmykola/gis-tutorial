@@ -92,7 +92,7 @@ DATABASES = {
 #          'PORT': '5432',
     }
 }
-POSTGIS_VERSION = (2, 0, 3)
+POSTGIS_VERSION = (11.6)
 
 import dj_database_url
 db_from_env = dj_database_url.config()
@@ -102,8 +102,6 @@ DATABASES['default']['ENGINE'] = 'django.contrib.gis.db.backends.postgis'
 SERIALIZATION_MODULES = {
     'geojson':'djgeojson.serializers'
 }
-
-
 
 # Password validation
 # https://docs.djangoproject.com/en/2.0/ref/settings/#auth-password-validators
