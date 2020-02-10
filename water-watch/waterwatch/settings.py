@@ -84,20 +84,19 @@ WSGI_APPLICATION = 'waterwatch.wsgi.application'
 
 DATABASES = {
     'default': {
-#          'ENGINE': 'django.contrib.gis.db.backends.postgis',
-#          'NAME': 'd8vpute4kt5m2r',
-#          'USER': 'ptiescnzfmrqig',
-#          'PASSWORD': '98e81a975d31301f31c0cbe2f92c390731e83e2877fc6e87f600e13c5fa92978',
-#          'HOST': 'localhost',
-#          'PORT': '5432',
+         'ENGINE': 'django.contrib.gis.db.backends.postgis',
+         'NAME': 'cptwater',
+         'USER': 'waterwatch',
+         'PASSWORD': 'postgres',
+         'HOST': 'localhost',
     }
 }
 POSTGIS_VERSION = (11.6)
 
-import dj_database_url
-db_from_env = dj_database_url.config()
-DATABASES['default'].update(db_from_env)
-DATABASES['default']['ENGINE'] = 'django.contrib.gis.db.backends.postgis'
+# import dj_database_url
+# db_from_env = dj_database_url.config()
+# DATABASES['default'].update(db_from_env)
+# DATABASES['default']['ENGINE'] = 'django.contrib.gis.db.backends.postgis'
 
 SERIALIZATION_MODULES = {
     'geojson':'djgeojson.serializers'
